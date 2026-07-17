@@ -71,7 +71,9 @@ MIGRATED = [
     # "tests/unit/results/**",
 
     # --- Wave 4: components on the bases (parallel; one batched PR per owner — pr-plan.md §3.2) ---
-    # PR: models provider clients + gemini CLI agent
+    # PR: models provider clients + CLI agents (gemini, openclaw) + agents shared
+    # (test_legacy_openclaw_tokens.py is NOT listed: it tests the legacy pkg/ parser and
+    # retires with gke-labs)
     # "devops_bench/models/gemini.py",
     # "tests/unit/models/test_models_gemini.py",
     # "devops_bench/models/claude.py",
@@ -81,13 +83,11 @@ MIGRATED = [
     # "devops_bench/agents/cli/gemini_cli/**",
     # "devops_bench/agents/cli/__init__.py",
     # "tests/unit/agents/test_agents_cli_gemini.py",
-    # PR: openclaw CLI agent + agents shared + chaos base
-    # (chaos base replaces upstream agents/chaos/ — git rm the 3 superseded files in this PR)
     # "devops_bench/agents/cli/openclaw/**",
     # "tests/unit/agents/test_agents_cli_openclaw.py",
-    # "tests/unit/agents/test_legacy_openclaw_tokens.py",
     # "devops_bench/agents/shared/**",
     # "tests/unit/agents/shared/**",
+    # PR: chaos base (replaces upstream agents/chaos/ — git rm the 3 superseded files in this PR)
     # "devops_bench/chaos/base.py",
     # "devops_bench/chaos/agent.py",
     # "devops_bench/chaos/schema.py",
